@@ -1,2 +1,4 @@
-name: Your New Jekyll Site
+name: wbyoko
 pygments: true
+permalink: none
+timezone: America/Chicago
