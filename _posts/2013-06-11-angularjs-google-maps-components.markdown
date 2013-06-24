@@ -4,6 +4,7 @@ title:  "Awesome Google Maps Components with AngularJS"
 date:   2013-06-11 18:00:00
 categories: angularjs
 ---
+
 ## Making Google Maps Components with AngularJS
 
 I have been hacking with AngularJS since the start of the year.  I really enjoy the framework, though outside of personal and side projects, I really hadn't found a good way to get it into the toolkit at work. I thought maps would be a good opportunity. I had already chipped in with two Google Maps pieces this year. Unfortunately though, I was only helping some people who were inexperienced with javascript, and wouldn't be maintaining those projects. I looked into using some of the open source google maps directives out there (great job on all of them), but at the end it was too much to hand off to someone who wasn't the strongest javascript developer, and ending up acquiescing to use jQuery and Handlebars. 
