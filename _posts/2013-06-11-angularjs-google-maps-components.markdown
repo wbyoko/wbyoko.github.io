@@ -35,8 +35,7 @@ angular.module('mapComponentsApp', []).directive('helloMaps', function () {
 });
 {% endhighlight %}
 
-You could use a directive controller, and would be straightforward using both. I created a [demo](http://wbyoko.co/angularjs-google-maps-components/demos/01-Hello-Maps.html)/[source file]
-(https://github.com/wbyoko/angularjs-google-maps-components/blob/master/01-Hello-Maps.html) which shows a simple map example. 
+You could use a directive controller, and would be straightforward using both. I created a [demo](/demos/01-Hello-Maps.html)/[source file](https://github.com/wbyoko/angularjs-google-maps-components/blob/master/01-Hello-Maps.html) which shows a simple map example. 
 
 ## Custom Controls
 Now, it wasn't until I had realized the ease with which I could add data-binded custom controls, that I knew that AngularJS could help making really ambitions maps applications not only possible, but very manageable. After tinkering with a few situations, I recognized that using the [$compile](http://docs.angularjs.org/api/ng.$compile) service to compile HTML into an AngularJS template and link it to the directive's scope fits perfectly. Ends up being three lines. 
@@ -49,12 +48,16 @@ map.controls[google.maps.ControlPosition.TOP_LEFT].push(controlElem[0]);
 
 I left the templates as strings as there are opportunites to use pre-angular templating systems, such as [John Resig's Micro-Templating Function](http://ejohn.org/blog/javascript-micro-templating/) to offload some of the logic that wouldn't need to be managed by AngularJS.
 
-I created a [demo](http://wbyoko.co/angularjs-google-maps-components/demos/02-Say-Hello.html)/[source file](https://github.com/wbyoko/angularjs-google-maps-components/blob/master/02-Say-Hello.html) to show a data-binded custom controls in action.
+I created a [demo](/demos/02-Say-Hello.html)/[source file](https://github.com/wbyoko/angularjs-google-maps-components/blob/master/02-Say-Hello.html) to show a data-binded custom controls in action.
+
+![Say Hello](/screenshots/say-hello.png)
 
 ## Binding to the Map
 There end up being two parts to the binding. one will be reciveing data from map events, the other is making the map reacting to scope changes. 
 
-I tackle this, a lat/long binding would be a good proof of concept and here it is [demo](http://wbyoko.co/angularjs-google-maps-components/demos/03-Say-Where.html)/[source file](https://github.com/wbyoko/angularjs-google-maps-components/blob/master/03-Say-Where.html). 
+I tackle this, a lat/long binding would be a good proof of concept and here it is [demo](/demos/03-Say-Where.html)/[source file](https://github.com/wbyoko/angularjs-google-maps-components/blob/master/03-Say-Where.html). 
+
+![Say Where](/screenshots/say-where.png)
 
 Responding to map event is done basically the same way Google Maps advices with the slight Angular twist of a ```scope.$apply``` to make sure the changes are reflected in Angular. 
 
@@ -85,7 +88,9 @@ $scope.$watch('latitude + longitude', function (newValue, oldValue) {
 {% endhighlight %}
 
 ## Todo Maps
-At this point there only one thing left to do.... todo maps [demo](http://wbyoko.co/angularjs-google-maps-components/demos/04-Todo-Maps.html)/[source file](https://github.com/wbyoko/angularjs-google-maps-components/blob/master/04-Todo-Maps.html). Even thought it end up being a fair bit of code the most important code is the link function of the todoMaps directive (at the bottom of source), which is it still digestable, and is the core of the entire application.
+At this point there only one thing left to do.... todo maps [demo](/demos/04-Todo-Maps.html)/[source file](https://github.com/wbyoko/angularjs-google-maps-components/blob/master/04-Todo-Maps.html). Even thought it end up being a fair bit of code the most important code is the link function of the todoMaps directive (at the bottom of source), which is it still digestable, and is the core of the entire application.
+
+![Todo Maps](/screenshots/todo-maps.png)
 
 ### Tools
 The only tools I used for these examples were 
