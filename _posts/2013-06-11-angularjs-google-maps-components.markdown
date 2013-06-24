@@ -50,14 +50,14 @@ I left the templates as strings as there are opportunites to use pre-angular tem
 
 I created a [demo](/demos/02-Say-Hello.html)/[source file](https://github.com/wbyoko/angularjs-google-maps-components/blob/master/02-Say-Hello.html) to show a data-binded custom controls in action.
 
-![Say Hello](/screenshots/say-hello.png)
+[![Say Hello](/screenshots/say-hello.png)](/demos/02-Say-Hello.html)
 
 ## Binding to the Map
 There end up being two parts to the binding. one will be reciveing data from map events, the other is making the map reacting to scope changes. 
 
 I tackle this, a lat/long binding would be a good proof of concept and here it is [demo](/demos/03-Say-Where.html)/[source file](https://github.com/wbyoko/angularjs-google-maps-components/blob/master/03-Say-Where.html). 
 
-![Say Where](/screenshots/say-where.png)
+[![Say Where](/screenshots/say-where.png)](/demos/03-Say-Where.html)
 
 Responding to map event is done basically the same way Google Maps advices with the slight Angular twist of a ```scope.$apply``` to make sure the changes are reflected in Angular. 
 
@@ -90,7 +90,7 @@ $scope.$watch('latitude + longitude', function (newValue, oldValue) {
 ## Todo Maps
 At this point there only one thing left to do.... todo maps [demo](/demos/04-Todo-Maps.html)/[source file](https://github.com/wbyoko/angularjs-google-maps-components/blob/master/04-Todo-Maps.html). Even thought it end up being a fair bit of code the most important code is the link function of the todoMaps directive (at the bottom of source), which is it still digestable, and is the core of the entire application.
 
-![Todo Maps](/screenshots/todo-maps.png)
+[![Todo Maps](/screenshots/todo-maps.png)](/demos/04-Todo-Maps.html)
 
 ### Tools
 The only tools I used for these examples were 
