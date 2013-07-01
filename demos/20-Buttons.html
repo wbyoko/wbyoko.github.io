@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>20 Buttons</title>
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"> 
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+</head>
+<body ng-app="">
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span8 offset2">
+				<h2>20 Buttons</h2>
+				<div class="row-fluid">
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn1=false" ng-click="btn1=!btn1" ng-class="btn1 && 'btn-primary'">Button 1</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn2=false" ng-click="btn2=!btn2" ng-class="btn2 && 'btn-primary'">Button 2</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn3=false" ng-click="btn3=!btn3" ng-class="btn3 && 'btn-primary'">Button 3</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn4=false" ng-click="btn4=!btn4" ng-class="btn4 && 'btn-primary'">Button 4</button></div>
+				</div>
+				<div class="row-fluid">
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn5=false" ng-click="btn5=!btn5" ng-class="btn5 && 'btn-primary'">Button 5</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn6=false" ng-click="btn6=!btn6" ng-class="btn6 && 'btn-primary'">Button 6</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn7=false" ng-click="btn7=!btn7" ng-class="btn7 && 'btn-primary'">Button 7</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn8=false" ng-click="btn8=!btn8" ng-class="btn8 && 'btn-primary'">Button 8</button></div>
+				</div>
+				<div class="row-fluid">
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn9=false" ng-click="btn9=!btn9" ng-class="btn9 && 'btn-primary'">Button 9</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn10=false" ng-click="btn10=!btn10" ng-class="btn10 && 'btn-primary'">Button 10</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn11=false" ng-click="btn11=!btn11" ng-class="btn11 && 'btn-primary'">Button 11</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn12=false" ng-click="btn12=!btn12" ng-class="btn12 && 'btn-primary'">Button 12</button></div>
+				</div>
+				<div class="row-fluid">
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn13=false" ng-click="btn13=!btn13" ng-class="btn13 && 'btn-primary'">Button 13</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn14=false" ng-click="btn14=!btn14" ng-class="btn14 && 'btn-primary'">Button 14</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn15=false" ng-click="btn15=!btn15" ng-class="btn15 && 'btn-primary'">Button 15</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn16=false" ng-click="btn16=!btn16" ng-class="btn16 && 'btn-primary'">Button 16</button></div>
+				</div>
+				<div class="row-fluid">
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn17=false" ng-click="btn17=!btn17" ng-class="btn17 && 'btn-primary'">Button 17</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn18=false" ng-click="btn18=!btn18" ng-class="btn18 && 'btn-primary'">Button 18</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn19=false" ng-click="btn19=!btn19" ng-class="btn19 && 'btn-primary'">Button 19</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-init="btn20=false" ng-click="btn20=!btn20" ng-class="btn20 && 'btn-primary'">Button 20</button></div>
+				</div>
+				<hr>
+				<div class="row-fluid">
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn1 && btn2) && 'btn-success' || 'disabled'">Div 1</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn3 && btn4) && 'btn-success' || 'disabled'">Div 2</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn5 && btn6) && 'btn-success' || 'disabled'">Div 3</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn7 && btn8) && 'btn-success' || 'disabled'">Div 4</button></div>
+				</div>
+				<div class="row-fluid">
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn9 && btn10) && 'btn-success' || 'disabled'">Div 5</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn11 != btn12) && 'btn-success' || 'disabled'">Div 6</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn13 != btn14) && 'btn-success' || 'disabled'">Div 7</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn15 != btn16) && 'btn-success' || 'disabled'">Div 8</button></div>
+				</div>
+				<div class="row-fluid">
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn17 != btn18) && 'btn-success' || 'disabled'">Div 9</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn19 != btn20) && 'btn-success' || 'disabled'">Div 10</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn1 == btn3 && btn10) && 'btn-success' || 'disabled'">Div 11</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn4 == btn6 && btn12) && 'btn-success' || 'disabled'">Div 12</button></div>
+				</div>
+				<div class="row-fluid">
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn7 == btn9 && btn14) && 'btn-success' || 'disabled'">Div 13</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn11 == btn13 && btn16) && 'btn-success' || 'disabled'">Div 14</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn15 == btn17 && btn18) && 'btn-success' || 'disabled'">Div 15</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn18 == btn20 && btn20) && 'btn-success' || 'disabled'">Div 16</button></div>
+				</div>
+				<div class="row-fluid">
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn1 || btn2) && 'btn-success' || 'disabled'">Div 17</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn3 || btn7) && 'btn-success' || 'disabled'">Div 18</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn6 || btn11) && 'btn-success' || 'disabled'">Div 19</button></div>
+					<div class="span3"><button class="btn btn-block" type="button" ng-class="(btn11 || btn20) && 'btn-success' || 'disabled'">Div 20</button></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
