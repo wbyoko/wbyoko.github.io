@@ -99,12 +99,15 @@ The only tools I used for these examples were
 * [YUI's Pure Css Framework](http://purecss.io/)
 
 #### Summary
-There were no other external dependencies for these samples nor do i believe any would they have made making these components any easier (angular has $http for ajax requests)
+There were no other external dependencies for these samples nor do i believe any would they have made making these components any easier.
 
 ### I think this is big
 This is an awesome use case that could have AngularJS showing up in a lot of places. As someone writes a map a least once or twice a year, I feel it's a much more pleasant workflow than using jQuery/Handlebars, Not to mention the easy assess to data-binded custom map controls and the savvy look and feature set your map could achieve pretty easily.
 
 ### Learn more about AngularJS
 Hopefully, if you don't know AngularJS, you are now interested. A great list of [AngularJS resources](https://github.com/jmcunningham/AngularJS-Learning), started by @jmcunningham has tons of great info from articles to videos to books. 
+
+### Questions, Comments, More
+Please get in touch with my through [Twitter](https://twitter.com/wbyoko). You can also add issues to the [Github Repo](https://github.com/wbyoko/angularjs-google-maps-components) for additional sections, or other types of examples. 
 
 Happy Coding, wbyoko
