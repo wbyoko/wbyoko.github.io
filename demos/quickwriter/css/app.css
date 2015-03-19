@@ -1,0 +1,11 @@
+body {
+	background-color: #9f9f9f;
+}
+.writer {
+	width: 400px;
+}
+
+#editor {
+    width: 400px;
+    height: 200px;
+}
