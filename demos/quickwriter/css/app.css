@@ -5,7 +5,9 @@ body {
 	width: 400px;
 }
 
-#editor {
+.editor {
     width: 400px;
-    height: 200px;
+    height: 100px;
 }
+
+svg text::selection { background: none; }

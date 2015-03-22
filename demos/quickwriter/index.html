@@ -7,13 +7,10 @@
         <title>Quickwriter</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/app.css" rel="stylesheet">
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
-        <script src="js/hammer-1.0.5/hammer.min.js"></script>
-        <script src="js/hammer-1.0.5/angular-hammer.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.0.0/ace.js"></script>
         <script src="js/app.js"></script>
     </head>
@@ -21,28 +18,26 @@
         <div class="writer container" ng-controller="aceCtrl as c">
             <div class="row">
                 <div class="btn-group btn-group-justified">
-                    <a type="button" class="btn btn-default" ng-click="c.selectAll()">Select All</a>
-                    <a type="button" class="btn btn-default" ng-click="c.clearAll()">Clear All</a>
-                    <a type="button" class="btn btn-default" ng-click="c.copyAll()">Copy All</a>
+                    <a type="button" class="btn btn-primary" ng-click="c.ace.selectAll()">Select All</a>
+                    <a type="button" class="btn btn-primary" ng-click="c.ace.clearAll()">Clear All</a>
                 </div>
                 <svg 
                     width="400" 
                     height="400" 
                     viewBox="0 0 100 100" 
                     ng-mouseleave="c.stop()" 
-                    hm-release="c.stop()" 
-                    ng-mouseup="c.logMe($event)">
+                    ng-mouseup="c.stop()">
 
                     <polygon
                         fill="white"
                         points="0,0 50,50 100,0" 
                         ng-mouseenter="c.on() && c.addPath('1')"
-                        ng-click="c.return()"/>
+                        ng-click="c.ace.return()"/>
                     <polygon
                         fill="white"
                         points="100,0 50,50 100,100" 
                         ng-mouseenter="c.on() && c.addPath('2')"
-                        ng-click="c.backspace()"/>
+                        ng-click="c.ace.backspace()"/>
                     <polygon 
                         fill="white"
                         points="100,100 50,50 0,100"  
@@ -51,7 +46,7 @@
                         fill="white"
                         points="0,100 50,50 0,0" 
                         ng-mouseenter="c.on() && c.addPath('4')"
-                        ng-click="c.space()"/>
+                        ng-click="c.ace.space()"/>
 
                     <line x1="50" y1="50" x2="0" y2="0" stroke="blue" stroke-width="3"/>
                     <line x1="50" y1="50" x2="0" y2="100" stroke="red" stroke-width="3"/>
@@ -60,8 +55,9 @@
 
                     <circle cx="50" cy="50" r="15" stroke="black" stroke-width="2" 
                         ng-attr-fill="{{c.on() && 'blue' || 'white'}}"
-                        hm-hold="c.start()"
-                        hm-options="{hold_timeout:200}"
+                        ng-mousedown="c.begin()"
+                        ng-mouseup="!c.on() && c.cancel()"
+                        ng-mouseleave="!c.on() && c.cancel()"
                         ng-mouseenter="c.on() && c.consume()"/>
 
                     <text x="36" y="32" ng-attr-fill="{{c.cl('s') && 'red' || c.cl('S') && 'blue' || 'gray'}}">s</text>
@@ -102,18 +98,14 @@
                     <text x="26" y="62" ng-attr-fill="{{c.cl('i') && 'red' || c.cl('I') && 'blue' || 'gray'}}">i</text>
                     <text x="16" y="72" ng-attr-fill="{{c.cl('h') && 'red' || c.cl('H') && 'blue' || 'gray'}}">h</text>
                     <text x="10" y="82" ng-attr-fill="{{c.cl('j') && 'red' || c.cl('J') && 'blue' || 'gray'}}">j</text>
-                    <text x="0"  y="92" ng-attr-fill="{{c.cl(',') && 'red' || 'gray'}}">,</text>   
-
-                    <!--
-                    <text x="20" y="20" stroke="gray">return</text>
-                    <text x="20" y="20" stroke="gray">?123</text>
-                    <text x="20" y="20" stroke="gray">backspace</text>
-                    <text x="20" y="20" stroke="gray">enter</text>
-                    <text x="20" y="20" stroke="gray">text-to-speech</text> 
-                    -->
+                    <text x="0"  y="92" ng-attr-fill="{{c.cl(',') && 'red' || 'gray'}}">,</text>
                 </svg>
-                <div ace-editor="" id="editor" class="xs-col-12"></div>
-                <h6>{{c.aceLength()}}</h6>
+            </div>
+            <div class="row editor">
+                <div ace-editor="" class="editor" class="xs-col-12"></div>
+            </div>
+            <div class="row">
+                <h6>{{c.ace.length()}}</h6>
             </div>
         </div>
         <script type="text/javascript">
